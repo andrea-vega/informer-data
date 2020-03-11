@@ -1,0 +1,155 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="{{ url('reset.css') }}">
+	<link rel="stylesheet" href="{{ url('open-sans.css') }}">
+	<link rel="stylesheet" href="{{ url('styles.css') }}">
+</head>
+
+<body>
+
+	<div>
+
+		<div class="fax-back">
+			{% for batch in batches %}
+
+			<table>
+				<tbody>
+					<!-- TOP - HEADER ROW -->
+					<tr>
+						<td>
+							<!-- HEADER - LOGO, TITLE, DETAILS -->
+							<table class="batch-header">
+								<tbody>
+									<tr>
+										<!-- Company logo -->
+										<td class="logo">
+											<img src="{{ batch.logo }}" alt="Logo" />
+										</td>
+
+											<!-- Report title and company details -->
+										<td>
+											<div class="title">Time Sheet Report</div>
+											<div class="nowrap">{{ batch.company_name }}</div>
+											<div class="nowrap">
+												<span class="label">P</span> {{ batch.phone }}
+												&nbsp;
+												<span class="label">F</span> {{ batch.fax }}
+											</div>
+											{%if $inputs.headerNotes %}
+											<div class="header-notes">{{ $inputs.headerNotes }}</div>
+											{%endif%}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- END HEADER TABLE -->
+						</td>
+					</tr>
+					<!-- END TOP - HEADER ROW -->
+
+
+					<!-- TOP - REPORT PARAMETERS ROW -->
+					<tr>
+						<td>
+							<!-- REPORT PARAMS TABLE -->
+							<table class="report-params">
+								<tbody>
+									<tr>
+										<td class="label">Pay Period</td>
+										<td class="value">{{ batch.pay_period_start | date }} -
+											{{ batch.pay_period_end | date }}</td>
+
+										<td class="label">Company</td>
+										<td class="value">{{ batch.client_id }}</td>
+									</tr>
+									<tr>
+										<td class="label">Invoice Date</td>
+										<td class="value">{{ batch.deliver_date | date }}</td>
+
+										<td class="label">Payroll</td>
+										<td class="value">{{ batch.batch_no }}</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- END REPORT PARAMS TABLE -->
+						</td>
+					</tr>
+					<!-- END TOP - REPORT PARAMETERS ROW -->
+
+
+					<!-- TOP - DETAIL ROW -->
+					<tr>
+						<td>
+
+							<!-- DETAIL TABLE -->
+							<table class="data-table">
+
+								<thead>
+									<!-- COLUMN HEADERS -->
+									<tr>
+										<th>NAME</th>
+										{% for pay_code in batch.pay_codes %}
+										<th class="number-cell">{{ pay_code.header }}</th>
+										{% endfor %}
+										<th>NOTES</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- ROW PER EMPLOYEE -->
+									{% for i in range(0, batch.employeeId.length) %}
+									<tr>
+										<td class="name-column">
+											<div class="nowrap bold">{{ batch.sort_name[i] }}</div>
+											<div class="nowrap">
+												<!-- INNER DETAIL TABLE -->
+												<table>
+													<tr>
+														<td class="nowrap">
+															<span>{{ batch.employeeId[i] }}</span>
+															<span>{{ batch.tax_status[i] }}</span>
+															<span>{{ batch.pay_group[i] }}</span>
+														</td>
+														<td class="number-cell">
+															<span>{{ batch.pay_amount[i] | number('0,0.00') }}</span>
+														</td>
+													</tr>
+												</table>
+												<!-- END INNER DETAIL TABLE -->
+											</div>
+											<div class="nowrap">
+												<span>{{ batch.pay_method[i] }}</span>
+												<span>{{ batch.employee_status[i] }}</span>
+											</div>
+											<div>&nbsp;</div>
+										</td>
+
+										<!-- COLUMNS VARIABLE BASED ON PAY CODE DATA -->
+										{% for pay_code in batch.pay_codes %}
+										<td class="number-cell">
+											<span>{{ pay_code.values[i] | number('0.00') }}</span>
+										</td>
+										{% endfor %}
+
+										<td>{{ employee.notes }}</td>
+
+									</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+							<!-- END DETAIL TABLE -->
+						</td>
+					</tr>
+					<!-- END TOP - DETAIL ROW -->
+				</tbody>
+			</table>
+
+			{%if $inputs.memo %}
+			<div class="memo">{{ $inputs.memo }}</div>
+			{%endif%}
+
+			{% endfor %}
+		</div>
+</body>
+
+</html>

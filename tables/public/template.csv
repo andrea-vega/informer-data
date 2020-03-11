@@ -1,0 +1,2 @@
+tenant,id,type,ownerId,name,slug,description,settings,templateFileId,editingId,folderId,shared,createdAt,updatedAt
+manager,a308ef9f-7d13-4ca2-b32d-e1b8f8a27a6a,nunjucks,admin,Fax Back Report,fax-back-report,,{},de270e40-7c8f-4704-b4ba-9654a0a9da53,,,f,2019-12-12 16:13:13.28+00,2020-01-23 20:57:09.54+00

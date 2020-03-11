@@ -1,0 +1,23 @@
+{
+    "createdBy": {
+        "username": "admin",
+        "displayName": "System Administrator"
+    },
+    "createdAt": "2020-03-11T19:10:30.725Z",
+    "bundle": {
+        "name": "Fax Back Report"
+    },
+    "system": {
+        "id": "manager",
+        "name": "Manager",
+        "systemId": "8f73e081-2e81-40e5-abd2-50522ce2b1f2"
+    },
+    "version": "5.1.4",
+    "datasources": [
+        {
+            "id": "61afd6d4-dbd6-404e-91d5-515fef4682f6",
+            "name": "Delta",
+            "type": "postgres"
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+id,ownerId,slug,name,description,embedded,type,connection,scannedAt,schemaUpdatedAt,rescanRequired,shared,schemas,settings,createdAt,updatedAt,fileId,source,sourceId,_altid,tenant
+61afd6d4-dbd6-404e-91d5-515fef4682f6,admin,delta,Delta,,f,postgres,{},2020-01-09 18:45:59.2+00,2020-01-10 19:37:37.832+00,f,f,"[""public""]","{""multiSchema"": false, ""useFakeData"": false, ""remoteQueryBatchSize"": {""multiKey"": 2000, ""singleKey"": 500}, ""usePreparedStatements"": false}",2019-11-19 20:07:41.402+00,2020-01-10 19:37:37.832+00,,,,,manager

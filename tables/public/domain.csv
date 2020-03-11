@@ -1,0 +1,2 @@
+id,name,description,type,config,scannedAt,createdAt,updatedAt,public,tenant
+local,Local,Users and teams created inside Informer,local,{},,2019-12-03 15:23:15.998315+00,2019-12-03 15:23:15.998315+00,{},manager

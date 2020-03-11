@@ -1,0 +1,116 @@
+.fax-back {
+    font-family: Open Sans, sans-serif;
+    page-break-after: always;
+    padding: 20px;
+}
+
+.header {
+    display: 'inline-block';
+}
+
+.batch-header {
+    margin-bottom: 30px;
+}
+
+.batch-header td {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.batch-header .logo {
+    width: 150px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.batch-header .logo img {
+    height: 65px;
+    width: 100px;
+    padding-right: 20px;
+}
+
+.batch-header .title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+td.name-column span:not(:last-child) {
+    padding-right: 16px;
+}
+
+.data-table > thead th {
+    padding: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.data-table > thead th.number-cell {
+    text-align: right;
+}
+
+td.number-cell {
+    text-align: right;
+    vertical-align: top;
+}
+
+.data-table td.number-cell span {
+    padding-left: 16px;
+}
+
+.data-table > tbody > tr > td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.data-table > tbody > tr > td:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.report-params {
+    width: auto;
+    margin-bottom: 22px;
+}
+
+.label {
+    white-space: nowrap;
+    font-weight: bold;
+    opacity: 0.70;
+}
+
+.report-params .label {
+    padding-right: 20px;
+}
+
+.report-params .value {
+    white-space: nowrap;
+}
+
+.report-params .value:not(:last-child) {
+    padding-right: 30px;
+}
+
+.header-notes {
+    font-weight: bold;
+    color: #3D5598;
+}
+
+.memo {
+    margin-top: 30px;
+    font-weight: bold;
+    opacity: 0.5;
+    font-size: 13px;
+}

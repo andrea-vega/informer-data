@@ -1,0 +1,6 @@
+id,filename,embedded,contentType,lobId,createdAt,updatedAt,ownerId,tenant,data,templateId,role
+5f2de718-2fc8-4c62-904c-292a770fe906,helpers.js,t,application/javascript,48673508,2019-12-12 16:13:13.396+00,2020-01-23 20:52:13.542+00,,manager,{},a308ef9f-7d13-4ca2-b32d-e1b8f8a27a6a,TEMPLATE
+bbf391f7-f245-4abf-999f-22c785b0a342,open-sans.css,t,text/css,48673509,2019-12-12 16:13:38.402+00,2020-01-23 20:52:13.542+00,,manager,{},a308ef9f-7d13-4ca2-b32d-e1b8f8a27a6a,ASSET
+c6a96031-d368-4839-b5e4-91b1d51e666f,styles.css,t,text/css,48673510,2019-12-12 16:13:56.656+00,2020-01-23 20:52:13.542+00,,manager,{},a308ef9f-7d13-4ca2-b32d-e1b8f8a27a6a,ASSET
+cf213ddc-0885-4ad5-ad10-a3ea485bec6f,reset.css,t,text/css,48673511,2019-12-12 16:13:47.268+00,2020-01-23 20:52:13.542+00,,manager,{},a308ef9f-7d13-4ca2-b32d-e1b8f8a27a6a,ASSET
+de270e40-7c8f-4704-b4ba-9654a0a9da53,template.njk,t,text/html,48673507,2019-12-12 16:13:13.332+00,2020-01-23 20:52:13.542+00,,manager,{},a308ef9f-7d13-4ca2-b32d-e1b8f8a27a6a,TEMPLATE
